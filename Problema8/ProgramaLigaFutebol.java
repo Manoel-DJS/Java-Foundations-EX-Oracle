@@ -23,9 +23,21 @@ public class ProgramaLigaFutebol {
         do{
             System.out.println("Digite a temperatura da semana: ");
             temperatura = scanner.nextDouble();
+            System.out.println("Digite o placar do time 1: ");
+            p1 = scanner.nextInt();
+            System.out.println("Digite o placar do time 2: ");
+            p2 = scanner.nextInt();
             Jogo jogoSemana = new Jogo();
 
+            jogoSemana.setPlacarTime1(p1);
+            jogoSemana.setPlacarTime2(p2);
+            jogoSemana.setTemperatura(temperatura);
+
+            liga.TabelaDeJogos.add(jogoSemana);
+
         } while(temperatura > 0);
+
+        scanner.close();
 
         Jogo jogoDeAbertura = new Jogo();
 
