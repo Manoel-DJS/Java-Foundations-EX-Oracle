@@ -5,6 +5,8 @@ public class ColorRange {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // ENTRADA DE DADOS
+
         System.out.println(" *Determinando a cor no espectro visível* \n");
 
         System.out.println("Digite o código para determinar a cor do espectro: ");
@@ -12,22 +14,25 @@ public class ColorRange {
         String cor = "";
         scanner.close();
 
+        // PROCESSAMENTO
         if(codEspectro >= 380 && codEspectro <=450){
-            cor = "Violeta";
+            cor = "A cor é Violeta";
         } else if(codEspectro > 450 && codEspectro <=495){
-            cor = "Azul";
+            cor = "A cor é Azul";
         } else if(codEspectro > 495 && codEspectro <=570){
-            cor = "Verde";
+            cor = "A cor é Verde";
         } else if(codEspectro > 570 && codEspectro <=590){
-            cor = "Amarelo";
+            cor = "A cor é Amarelo";
         } else if(codEspectro > 590 && codEspectro <=620){
-            cor = "Laranja";
+            cor = "A cor é Laranja";
         } else if(codEspectro > 620 && codEspectro <=720){
-            cor = "Vermelho";
+            cor = "A cor é Vermelho";
         } else{
-            cor = "Não é pode ser visualizada";
+            cor = "O comprimento de onda inserido não faz parte do espectro visível";
         }
 
-        System.out.println("A cor é " + cor);
+        // SAÍDA
+
+        System.out.println(cor);
     }
 }
