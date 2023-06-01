@@ -1,55 +1,35 @@
 package Problema6;
+import java.util.Scanner;
 
 public class LoopShapeTest {
     public static void main(String[] args) {
-        String teste = "";    
-        String baseAltura = "";
+        Scanner scanner = new Scanner(System.in);
+        LoopShape func = new LoopShape();
 
-        for (int x = 1; x<=4; x++){
-            teste += "# \n";
+        // ENTRADA DE DADOS
 
-        }
+        System.out.println(" *Programa LoopShape* \n");
 
-        for(int c = 1 ; c<=5; c++){
-            baseAltura += "#";
-        }
+        System.out.println("Digite a altura do retângulo: ");
+        int altura = scanner.nextInt(); 
+        System.out.println("Digite a largura  do retângulo: ");
+        int largura = scanner.nextInt(); 
 
-        int espacosIntermediarios = 4; // Número de espaços intermediários desejado
-        String resultado = "#"; // Inicia com o caractere "#"
+        System.out.println("Digite o tamanho de uma perna para o triângulo isósceles: ");
+        int tamanhoPerna = scanner.nextInt();
+
+        scanner.close();
+
+        // PROCESSAMENTO
+        String retangulo = func.createRectangle(largura, altura);
+        String triangulo = func.createTriangle(tamanhoPerna);
+
+        // SAÍDA
+        System.out.println("\n!Retângulo!");
+        System.out.println(retangulo);
         
-        // Adiciona os espaços intermediários
-        for (int i = 0; i < espacosIntermediarios; i++) {
-            resultado += " ";
-        }
-        
-        resultado += "#"; // Adiciona o caractere "#" no final
-        
-        System.out.println(resultado); // Imprime a String resultante
+        System.out.println("\n!Triângulo!");
+        System.out.println("\n" + triangulo);
 
-        System.out.println(baseAltura+ "\n" + resultado + baseAltura + "\n" + baseAltura);
-    
-        System.out.println(""+ "\n\n\n");
-
-        int altura = 5; // Altura do retângulo
-        int largura = 10; // Largura do retângulo
-        
-        // Loop para controlar as linhas do retângulo
-        for (int i = 0; i < altura; i++) {
-            // Loop para controlar as colunas do retângulo
-            for (int j = 0; j < largura; j++) {
-                if (i == 0 || i == altura - 1 || j == 0 || j == largura - 1) {
-                    System.out.print("#"); // Imprime o caractere "#" nas bordas do retângulo
-                } else {
-                    System.out.print(" "); // Imprime espaços no centro do retângulo
-                }
-            }
-            System.out.println();
-    }
 }
 }
-/** 
-        for (int x = 1; x<=4; x++){
-            teste += "\n #";
-
-        }
-**/
