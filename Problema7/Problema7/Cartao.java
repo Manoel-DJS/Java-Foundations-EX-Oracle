@@ -1,7 +1,9 @@
+package Problema7;
+
 public class Cartao {
     private double saldoAtual;
     private double saldoTiquetes;
-    private int numeroCartao;
+    private int numeroIDCartao;
     
     // SaldoAtual
     public double getSaldoAtual() {
@@ -31,13 +33,13 @@ public class Cartao {
     
     // SaldoAtual
     public int getNumeroCartao() {
-        return numeroCartao;
+        return numeroIDCartao;
     }
     public void setNumeroCartao(int numeroCartao) {
         if(numeroCartao < 0){
             System.out.println("Valor não pode ser negativo");
         } else{
-            this.numeroCartao = numeroCartao;
+            this.numeroIDCartao = numeroCartao;
         }
     } 
 }
