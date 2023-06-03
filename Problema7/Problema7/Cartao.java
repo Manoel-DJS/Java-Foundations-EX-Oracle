@@ -1,19 +1,19 @@
 package Problema7;
 
 public class Cartao {
-    private double saldoAtual;
+    private double saldoAtualCredito;
     private double saldoTiquetes;
     private int numeroIDCartao;
     
     // SaldoAtual
     public double getSaldoAtual() {
-        return saldoAtual;
+        return saldoAtualCredito;
     }
     public void setSaldoAtual(double saldoAtual) {
         if(saldoAtual < 0){
             System.out.println("Valor não pode ser negativo");
         } else{
-            this.saldoAtual = saldoAtual;
+            this.saldoAtualCredito = saldoAtual;
         } 
     }
 

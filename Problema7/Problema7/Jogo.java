@@ -9,7 +9,7 @@ public class Jogo {
 
     Random random = new Random();
     
-    int tiqueteAleatorio = random.nextInt(9999) + 1000;
+    int tiqueteAleatorio = random.nextInt(101) + 1;
 
     public void passarCartao(){
         cartao1.setSaldoAtual(-1);
