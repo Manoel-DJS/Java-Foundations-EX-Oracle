@@ -3,7 +3,7 @@ package Problema7;
 public class Terminal {
     private int dinheiro;
 
-    Cartao cartao = new Cartao();
+    Cartao cartao1 = new Cartao();
     
     public int getDinheiro() {
         return dinheiro;
@@ -13,7 +13,7 @@ public class Terminal {
     }
 
     public void converterCredito(int dinheiro){
-        cartao.setSaldoAtual(this.dinheiro * 2);
+        cartao1.setSaldoAtual(this.dinheiro * 2);
     }
     
 }

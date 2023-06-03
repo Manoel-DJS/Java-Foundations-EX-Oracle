@@ -10,11 +10,7 @@ public class Cartao {
         return saldoAtualCredito;
     }
     public void setSaldoAtual(double saldoAtual) {
-        if(saldoAtual < 0){
-            System.out.println("Valor não pode ser negativo");
-        } else{
-            this.saldoAtualCredito = saldoAtual;
-        } 
+        this.saldoAtualCredito = saldoAtual;
     }
 
 
@@ -23,11 +19,8 @@ public class Cartao {
         return saldoTiquetes;
     }
     public void setSaldoTiquetes(double saldoTiquetes) {
-        if(saldoTiquetes < 0){
-            System.out.println("Valor não pode ser negativo");
-        } else{
         this.saldoTiquetes = saldoTiquetes;
-        }
+  
     }
 
     
