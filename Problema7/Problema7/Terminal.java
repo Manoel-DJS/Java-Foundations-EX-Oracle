@@ -3,8 +3,13 @@ package Problema7;
 public class Terminal {
     private int dinheiro;
 
-    Cartao cartao1 = new Cartao();
-    
+    public void adicionarCreditosViaDinheiro(Cartao cartao, int valorDinheiro) { // pega o numero do cartão 1 ou 2
+        double valorCreditos = valorDinheiro * 2.0; // Conversão de 2 créditos para cada 1 dólar
+        cartao.adicionarCredito(valorCreditos);
+        System.out.println("Créditos adicionados ao cartão " + cartao.getNumero() + ": " + valorCreditos);
+    }
+
+
     public int getDinheiro() {
         return dinheiro;
     }
@@ -13,7 +18,7 @@ public class Terminal {
     }
 
     public void converterCredito(int dinheiro){
-        cartao1.setSaldoAtual(this.dinheiro * 2);
+
     }
     
 }

@@ -1,38 +1,30 @@
 package Problema7;
 
 public class Cartao {
-    private double saldoAtualCredito;
-    private double saldoTiquetes;
-    private int numeroIDCartao;
-    
-    // SaldoAtual
-    public double getSaldoAtual() {
-        return saldoAtualCredito;
-    }
-    public void setSaldoAtual(double saldoAtual) {
-        this.saldoAtualCredito = saldoAtual;
+    private int numero;
+    private double saldoCredito;
+    private int saldoTickets;
+
+    public Cartao(int numero) {
+        this.numero = numero;
+        this.saldoCredito = 0;
+        this.saldoTickets = 0;
     }
 
-
-    // SaldoAtual
-    public double getSaldoTiquetes() {
-        return saldoTiquetes;
-    }
-    public void setSaldoTiquetes(double saldoTiquetes) {
-        this.saldoTiquetes = saldoTiquetes;
-  
+    public int getNumero() {
+        return numero;
     }
 
-    
-    // SaldoAtual
-    public int getNumeroCartao() {
-        return numeroIDCartao;
+    public double getSaldoCredito() {
+        return saldoCredito;
     }
-    public void setNumeroCartao(int numeroCartao) {
-        if(numeroCartao < 0){
-            System.out.println("Valor não pode ser negativo");
-        } else{
-            this.numeroIDCartao = numeroCartao;
-        }
-    } 
-}
+
+    public int getSaldoTickets() {
+        return saldoTickets;
+    }
+
+    public void adicionarCredito(double valor) {
+        saldoCredito += valor;
+    }
+} 
+
