@@ -19,13 +19,10 @@ public class Jogo {
         return creditos;
     }
 
-    public int gerarNumeroTickets() {
+    public void jogar(Cartao usarCartao) {
         // Gere um número aleatório não negativo de tíquetes
-        return (int) (Math.random() * 100);
+        System.out.println("Tickets");
+        usarCartao.adicionarCredito((int) (Math.random() * 100)); 
     }
 
-
-    public void passarCartao(){
-
-    }
 }

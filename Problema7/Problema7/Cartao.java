@@ -5,6 +5,9 @@ public class Cartao {
     private double saldoCredito;
     private int saldoTickets;
 
+    public Cartao(){
+
+    }
     public Cartao(int numero) {
         this.numero = numero;
         this.saldoCredito = 0;
@@ -21,6 +24,9 @@ public class Cartao {
 
     public int getSaldoTickets() {
         return saldoTickets;
+    }
+    public void setSaldoTickets(int saldoTickets) {
+        this.saldoTickets = saldoTickets;
     }
 
     public void adicionarCredito(double valor) {
