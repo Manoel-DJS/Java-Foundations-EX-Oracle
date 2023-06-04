@@ -20,5 +20,13 @@ public class Terminal {
     public void converterCredito(int dinheiro){
 
     }
-    
+
+    public class LeitorCartao {
+        public void lerCartao(Cartao cartao) {
+            System.out.println("Cartão " + cartao.getNumero() + " lido com sucesso.");
+            System.out.println("Saldo de crédito: " + cartao.getSaldoCredito());
+            System.out.println("Saldo de tíquetes: " + cartao.getSaldoTickets());
+        }
+    }
+
 }
