@@ -1,11 +1,7 @@
 package Problema7;
-import java.util.Random;
 
 public class Jogo {
     // private int leitorCartaoMagnetico; / private String monitorLCD;
-    Random random = new Random();
- 
-    int tiqueteAleatorio = random.nextInt(101) + 1;
 
     private String nomeJogo;
     private int creditos;
@@ -21,8 +17,9 @@ public class Jogo {
 
     public void jogar(Cartao usarCartao) {
         // Gere um número aleatório não negativo de tíquetes
-        System.out.println("Tickets");
-        usarCartao.adicionarCredito((int) (Math.random() * 100)); 
+        System.out.println("!Jogando!");
+        usarCartao.setSaldoTickets((int) (Math.random() * 500));
+        // subtrair credito
     }
 
 }

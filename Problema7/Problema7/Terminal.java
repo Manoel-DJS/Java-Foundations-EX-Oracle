@@ -21,10 +21,11 @@ public class Terminal {
     }
 
     public static void trocarTicketsPremio(Cartao cartao, CategoriaPremio premio){
-        if(cartao.getSaldoTickets() >= premio.getTicketsObrigatorios()){
-            cartao.adicionarCredito((premio.getTicketsObrigatorios())*1);
+        if(cartao.getSaldoTickets() >= premio.getTicketsObrigatorios()){ // contagem de itens for zero tbm
+            cartao.adicionarCredito((premio.getTicketsObrigatorios()*-1));
+
             System.out.println("\n!Operação realizada!");
-            System.out.println("Premio: " + premio.getNome());
+            System.out.println("Usando cartão: " + cartao.getNumero() + " Você ganhou o premio: " + premio.getNome());
         } else{
             System.out.println("ErROR");
         }
