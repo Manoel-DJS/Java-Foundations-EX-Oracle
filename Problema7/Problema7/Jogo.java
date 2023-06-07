@@ -19,6 +19,7 @@ public class Jogo {
         // Gere um número aleatório não negativo de tíquetes
         System.out.println("!Jogando!");
         usarCartao.setSaldoTickets((int) (Math.random() * 500));
+        usarCartao.adicionarCredito(creditos*-1);
         // subtrair credito
     }
 

@@ -8,8 +8,8 @@ public class ProgramaFliperama {
         Cartao cartao2 = new Cartao(2);
 
        // Carregando os créditos em cada cartão.
-        Terminal.adicionarCreditosViaDinheiro(cartao1, 300);
-        Terminal.adicionarCreditosViaDinheiro(cartao2, 200);
+        Terminal.adicionarCreditosViaDinheiro(cartao1, 100);
+        Terminal.adicionarCreditosViaDinheiro(cartao2, 100);
 
        // usando hascki cartao1.setSaldoTickets(3000);
 
@@ -19,7 +19,7 @@ public class ProgramaFliperama {
 
         // 2 Instancias Jogos
 
-        Jogo Cassino = new Jogo("Jogo dos Tíquetes Aleatórios", 5);
+        Jogo Cassino = new Jogo("Jogo dos Tíquetes Aleatórios", 25);
         Jogo Foguetinho = new Jogo("Jogo do Foguetinho da Tristeza", 30);
 
         Terminal.lerCartao(cartao1);
@@ -47,7 +47,6 @@ public class ProgramaFliperama {
 
         Terminal.lerCartao(cartao1);
         Terminal.lerCartao(cartao2);
-
 
         Terminal.trocarTicketsPremio(cartao1, Bolinha); // solicitar premio
 

@@ -25,5 +25,11 @@ public class CategoriaPremio {
     public void setTicketsObrigatorios(int ticketsObrigatorios) {
         this.ticketsObrigatorios = ticketsObrigatorios;
     }
+    public void setContagemItens(int contagemItens) {
+        this.contagemItens = contagemItens;
+    }
+    public int getContagemItens() {
+        return contagemItens;
+    }
 
 }
