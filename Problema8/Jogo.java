@@ -8,6 +8,36 @@ public class Jogo {
     private Equipe time1;
     private Equipe time2;
 
+    private static int _ID = 0;
+
+    private static int GeraID(){
+        _ID++;
+        return _ID;
+    }
+
+    public Jogo(){
+
+    }
+    
+    public Jogo(int p1, int p2, double temp){
+        this.placarTime1 = p1;
+        this.placarTime2 = p2;
+        this.temperatura = temp;
+        this.ID = Jogo.GeraID(); 
+    }
+
+    public Jogo(int p1, int p2, double temp, Equipe e1, Equipe e2){
+        this.placarTime1 = p1;
+        this.placarTime2 = p2;
+        this.temperatura = temp;
+        this.time1 = e1;
+        this.time2 = e2;
+        this.ID = Jogo.GeraID(); 
+        // Toda vez que chama o método ele gera um ID
+        // Com isso o Id n irá se repetir
+
+    }
+
     public int getID() {
         return ID;
     }

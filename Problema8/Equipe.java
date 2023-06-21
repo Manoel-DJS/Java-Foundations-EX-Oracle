@@ -8,6 +8,14 @@ public class Equipe {
     private int golsMarcados;
     private int golsSofridos;
     
+    public Equipe(){
+        
+    }
+
+    public Equipe(String nome){
+        this.nome = nome;
+    }
+
     public static void registrarPartida(Equipe[] equipes, int indiceEquipe1, int golsEquipe1, int golsEquipe2, int indiceEquipe2) {
         equipes[indiceEquipe1].registrarVitoria(golsEquipe1, golsEquipe2);
         equipes[indiceEquipe2].registrarDerrota(golsEquipe2, golsEquipe1);
