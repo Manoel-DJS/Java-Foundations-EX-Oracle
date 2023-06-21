@@ -20,29 +20,12 @@ public class ProgramaLigaFutebol {
         int semana = 1;
         int contadorFimTemporada = 3;
 
-        /** 
 
         do{
-            System.out.println("Digite a temperatura da semana: ");
-            temperatura = scanner.nextDouble();
-            System.out.println("Digite o placar do time 1: ");
-            p1 = scanner.nextInt();
-            System.out.println("Digite o placar do time 2: ");
-            p2 = scanner.nextInt();
-            Jogo jogoSemana = new Jogo();
 
-            jogoSemana.setPlacarTime1(p1);
-            jogoSemana.setPlacarTime2(p2);
-            jogoSemana.setTemperatura(temperatura);
-
-            liga.TabelaDeJogos.add(jogoSemana);
-
-        } while(temperatura > 0);
-            **/
-
-        do{
             System.out.println("Digite a temperatura da semana " + semana);
             temperatura = scanner.nextDouble();
+
             if(temperatura > 15){
                 // Se a temperatura estiver quente, programe 2 jogos
                 Random rndmzr = new Random();
@@ -59,7 +42,11 @@ public class ProgramaLigaFutebol {
                 
                 int placarT1 = rndmzr.nextInt(5); // placar aleatorio
                 int placarT2 = rndmzr.nextInt(5); // pra tirar é facil
-                Jogo jogo1 = new Jogo(placarT1, placarT2, temperatura);
+               
+                Equipe e1 = liga.equipesLiga.get(T2);
+                Equipe e2 = liga.equipesLiga.get(T2);
+
+                Jogo jogo1 = new Jogo(placarT1, placarT2, temperatura, e1, e2);
                 
                 
 
@@ -68,9 +55,9 @@ public class ProgramaLigaFutebol {
                 placarT1 = rndmzr.nextInt(5);
                 placarT2 = rndmzr.nextInt(5);
 
-                Jogo jogo2 = new Jogo(placarT1,placarT2, temperatura);
-                
-                Equipe e2 = liga.equipesLiga.get(T2);
+                Jogo jogo2 = new Jogo(placarT1,placarT2, temperatura, e1, e2);
+
+                                
                 jogo2.setTime2(e2);
                 
                 listaJogos.add(jogo1);
@@ -87,6 +74,25 @@ public class ProgramaLigaFutebol {
 
         scanner.close();
 
+        for(int i = 0 ; i < liga.TabelaDeJogos.size() ; i++){
+            Jogo jogo = liga.TabelaDeJogos.get(i);
+            if(jogo.getPlacarTime1() > jogo.getPlacarTime2()){
+                
+                // time 1 += 3 pontos
+                int v = jogo.getTime1().getVitorias();
+                jogo.getTime1().setVitorias(v+1);
+
+                // time 2 = 0 pontos
+                int d = jogo.getTime2().getDerrotas();
+                jogo.getTime2().setDerrotas(d+1);
+            } else  if(jogo.getPlacarTime1() > jogo.getPlacarTime2()){
+                // time 1 = 0 ponto
+                // time 2 += 3 pontos
+            } else{
+                // empate 1 ponto pra cada
+
+            }
+        } 
 
         for( int i = 0; i < listaJogos.size(); i++){
             Jogo temporario = listaJogos.get(i);
@@ -138,3 +144,24 @@ public class ProgramaLigaFutebol {
 
 
 **/
+
+
+        /** 
+
+        do{
+            System.out.println("Digite a temperatura da semana: ");
+            temperatura = scanner.nextDouble();
+            System.out.println("Digite o placar do time 1: ");
+            p1 = scanner.nextInt();
+            System.out.println("Digite o placar do time 2: ");
+            p2 = scanner.nextInt();
+            Jogo jogoSemana = new Jogo();
+
+            jogoSemana.setPlacarTime1(p1);
+            jogoSemana.setPlacarTime2(p2);
+            jogoSemana.setTemperatura(temperatura);
+
+            liga.TabelaDeJogos.add(jogoSemana);
+
+        } while(temperatura > 0);
+            **/
