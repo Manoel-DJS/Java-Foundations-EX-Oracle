@@ -86,8 +86,13 @@ public class ProgramaLigaFutebol {
                 int d = jogo.getTime2().getDerrotas();
                 jogo.getTime2().setDerrotas(d+1);
             } else  if(jogo.getPlacarTime1() > jogo.getPlacarTime2()){
+
                 // time 1 = 0 ponto
+                int v = jogo.getTime2().getVitorias();
+                jogo.getTime2().setVitorias(v+1);
                 // time 2 += 3 pontos
+                int d = jogo.getTime1().getDerrotas();
+                jogo.getTime1().setDerrotas(d+1);
             } else{
                 // empate 1 ponto pra cada
 
@@ -102,7 +107,8 @@ public class ProgramaLigaFutebol {
 
 
 
-
+        System.out.println("");
+        
     }
 }
 
