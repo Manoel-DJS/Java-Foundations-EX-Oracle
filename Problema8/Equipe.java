@@ -16,13 +16,6 @@ public class Equipe {
         this.nome = nome;
     }
 
-    public static void registrarPartida(Equipe[] equipes, int indiceEquipe1, int golsEquipe1, int golsEquipe2, int indiceEquipe2) {
-        equipes[indiceEquipe1].registrarVitoria(golsEquipe1, golsEquipe2);
-        equipes[indiceEquipe2].registrarDerrota(golsEquipe2, golsEquipe1);
-
-    }
-
-
     public String getNome(){ 
         return nome;
     }
@@ -66,21 +59,4 @@ public class Equipe {
         this.golsSofridos = golSofridos;
     }
 
-    public void registrarVitoria(int golsMarcados, int golsSofridos) {
-        this.vitorias++;
-        this.golsMarcados += golsMarcados;
-        this.golsSofridos += golsSofridos;
-    }
-
-    public void registrarDerrota(int golsMarcados, int golsSofridos) {
-        this.derrotas++;
-        this.golsMarcados += golsMarcados;
-        this.golsSofridos += golsSofridos;
-    }
-
-    public void registrarEmpate(int golsMarcados, int golsSofridos) {
-        this.empates++;
-        this.golsMarcados += golsMarcados;
-        this.golsSofridos += golsSofridos;
-    }
 }

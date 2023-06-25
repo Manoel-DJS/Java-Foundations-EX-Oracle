@@ -16,7 +16,7 @@ public class ProgramaLigaFutebol {
         liga.CriarLiga();
 
         double temperatura;
-        int p1,p2;
+
         int semana = 1;
         int contadorFimTemporada = 3;
 
@@ -117,6 +117,7 @@ public class ProgramaLigaFutebol {
  BOMBA!
 
 
+                int p1,p2;
 
         Jogo jogoDeAbertura = new Jogo();
 
