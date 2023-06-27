@@ -3,6 +3,7 @@ package Problema7;
 public class ProgramaFliperama {
     public static void main(String[] args) {
 
+        // !Pronto!
         // 2 Instancias Cartao
         Cartao cartao1 = new Cartao(1);
         Cartao cartao2 = new Cartao(2);

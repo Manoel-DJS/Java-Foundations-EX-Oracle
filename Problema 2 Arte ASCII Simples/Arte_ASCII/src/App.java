@@ -1,5 +1,5 @@
 /** 
-
+ !Pronto!
 Problema 1: Arte ASCII Simples
 Visão Geral
 O uso de texto para criar uma imagem é um processo conhecido 

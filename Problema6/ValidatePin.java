@@ -1,6 +1,8 @@
 package Problema6;
 import java.util.Scanner;
 
+// !Pronto!
+
 public class ValidatePin {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

@@ -1,4 +1,5 @@
 /** 
+ !Pronto!
 
 Seu programa também deve fazer o seguinte: 
  Aceitar pelo menos uma entrada, que deverá ser analisada como String *

@@ -1,6 +1,8 @@
 package Problema5;
 import java.util.Scanner;
 
+// !Pronto!
+
 public class TrafficLightCheckerS { // Usando a instrução switch.
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
